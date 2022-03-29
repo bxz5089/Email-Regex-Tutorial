@@ -1,4 +1,4 @@
-# Title (replace with your title)
+# Email Regex Tutorial
 
 Introductory paragraph (replace this with your text)
 
@@ -18,6 +18,8 @@ Briefly summarize the regex you will be describing and what you will explain. In
 - [Character Escapes](#character-escapes)
 
 ## Regex Components
+
+ Matching an Email: `/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/`
 
 ### Anchors
 
