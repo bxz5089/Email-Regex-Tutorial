@@ -75,12 +75,10 @@ For this tutorial I will be explaining how to understand a Regular Expression fo
 
     - One example would be `g`, which makes the expression search for all occurrences.
 
-
-
 ### Character Escapes
 
 - `\` escapes a character from being interpreted literally. In this email regex, `\.` was used to escape `.` so it can match with a period character. 
 
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+If you have any questions or concerns please contact me at bxz5089@gmail.com or checkout my GitHub page at bxz5089.
