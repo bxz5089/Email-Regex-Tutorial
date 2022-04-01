@@ -22,7 +22,7 @@ For this tutorial I will be explaining how to understand a Regular Expression fo
 
 ## Regex Components
 
-### Anchors
+### Anchors 
 - These two anchors can be seem in the email regex:
 
     - `^` matches at the beginning of the target string, showing the beginning of the line of data.
@@ -59,18 +59,27 @@ For this tutorial I will be explaining how to understand a Regular Expression fo
 
     - `\d` used in the email regex mean its looking for a matches to any digit characters
 
-- `\s` corresponds to a space symbol or character: includes spaces.
+- `\s` corresponds to a whitespace character: includes spaces.
 
 - `\w` corresponds to a word character: either a letter of the Latin alphabet or a digit or an underscore.
 
+- `.` corresponds to any character except the newline character (\n)
 
 ### The OR Operator
 
-- `|` is the OR operator, it matches characters or expression of either the left or right of the OR operator.
+- `|` is the OR operator, it matches characters or expression of either the left or right of the OR operator. This email regex does not use any OR Operator. 
 
 ### Flags
 
+- A flag is an optional parameter to a regex that modifies its behavior of searching. This email regex does not use any flags. 
+
+    - One example would be `g`, which makes the expression search for all occurrences.
+
+
+
 ### Character Escapes
+
+- `\` escapes a character from being interpreted literally. In this email regex, `\.` was used to escape `.` so it can match with a period character. 
 
 ## Author
 
