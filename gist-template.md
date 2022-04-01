@@ -6,9 +6,8 @@ According to MDN Web Docs, regex or regular expressions are patterns used to mat
 ## Summary
 
 The regex I will be describing is matching an email: `/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/`
-For this tutorial I will be explaining how to understand a Regular Expression
+For this tutorial I will be explaining how to understand a Regular Expression for matching an email. 
 
-and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
 
 ## Table of Contents
 
@@ -31,17 +30,43 @@ and what you will explain. Include a code snippet of the regex. Replace this tex
     - `$` matches at the end of the target string, showing the end of the line of data.
 
 ### Quantifiers
-- The email regex contains `+` which is one of the quantifiers that regular expressions use to generate matching possibilities and specifications.
+- The email regex contains `+` and `{}` which are quantifiers that regular expressions use to generate matching possibilities and specifications.
 
-    - `+` indicates one or more occurrences of the preceding element. For example, ab+c matches "abc", "abbc", "abbbc", and so on, but not "ac".
+    - `+` matches the pattern one or more times. For example, ab+c matches "abc", "abbc", "abbbc", and so on, but not "ac".
+
+    - `{2,6}` matches the pattern from a minimum of 2 times to a maximum of 6 times.
+
+- Other quantifiers includes `*` whichi matches the pattern zero or more times and `?` that matches the pattern zero or one time.
+
 
 ### Grouping Constructs
 
+- In the email regex example, there are three groups sections enclosed in round brackets; `([a-z0-9_\.-]+)`, `([\da-z\.-]+)`, and `([a-z\.]{2,6})`. Grouping the regex makes it easier to read and understand. Its main use is to unify strings so that it is matched in a complete block.
+
 ### Bracket Expressions
+
+- Bracket Expressions are characters enclosed by a bracket `[]`. The brackets indicate a set of characters to match. Any individual character between the brackets will match, and a hyphen can be used to define a set.
+
+    - For example, `[a-z0-9_\.-]` include two sets of characters to match (case sensitive), letters a to z, and number 0 to 9. So the front portion of the email can match any lowercase letter or digit, plus characters `_`, `.`, and `-`.
+
+    - [\da-z\.-] matches any digit characters, indecated by `\d`, lowercase letter a to z, `.`, and `-`.
+    
+    - [a-z\.] matches a to z lowercase letter and `.`. 
 
 ### Character Classes
 
+- `\d` corresponds to a digit: a character from 0 to 9.
+
+    - `\d` used in the email regex mean its looking for a matches to any digit characters
+
+- `\s` corresponds to a space symbol or character: includes spaces.
+
+- `\w` corresponds to a word character: either a letter of the Latin alphabet or a digit or an underscore.
+
+
 ### The OR Operator
+
+- `|` is the OR operator, it matches characters or expression of either the left or right of the OR operator.
 
 ### Flags
 
